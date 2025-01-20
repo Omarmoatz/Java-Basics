@@ -1,0 +1,200 @@
+	4 - 11 - 2024
+- update on the duration of the notification 
+- update duplicte notification endpoint 
+- search on stoping notification from bieing sent in the one signal documentation
+- work on canceling notification endpoint 
+
+
+
+	5 - 11 - 2024
+- fix status code template activation when template id is not in the given section id 
+- fix template retreive of empty list when there is no template found
+- separate my import export influncer logic from old class
+- add reset template endpoint
+- separate store visits logic 
+
+
+	6 - 11 - 2024
+- refactor reset template endpoint
+- work on making default store unique
+- add inlines to section, template in admin panel
+- work on custom prosseccor 
+
+
+	7 - 11 - 2024
+- add new fields to models(display_name, addional_settings)
+- add custom section content processor to handel all sections
+- add new processors(whatsapp processor, privacy policy processor)
+- refactor Base Section Content Processor
+
+
+	8 - 11 - 2024
+- add new fields to store (is_default)
+- handel all other endpoints that need default store
+- refactor Base Section Content Processor
+- fix problems in processors
+
+
+	12 - 11 - 2024
+- fix restore default data
+- add data in admin panel
+- add two fields for ordering component, template
+- prevent any one from deleting default store
+
+
+	18 - 11 - 2024
+- add data in trujena admin panel for popups
+- fix gulf error when adding an existtig tickect 
+
+
+	19 - 11 - 2024
+- delete page_url field field from store-popup  
+- make seetings of store-popup not required 
+- make store created copy the settings file of the default store
+
+ 
+ 
+ 	20 - 11 - 2024
+Gulftix
+	- make sequence order with created_at 
+	- make purchase order display section of sequence 
+Trujena
+	- add index for models of (stores, notifications, popup)
+	- add max image as a environment variable  
+	- create a command for applying settings of all stores that has changes
+	
+
+
+	21 - 11 - 2024
+- update popup data related to store popup
+- added pagination to popup 
+- display popup crated at date 
+- remove unnecassary code 
+- add an action for duplicating the store-popup 
+
+
+
+	24 - 11 - 2024
+- add action for Generalizing all component settings 
+- add image field for component 
+- update other endpoints that depends on component
+
+
+
+	25 - 11 - 2024
+Gulftix
+	- fix notification signals
+	- add (seller) after event column in addmin panel of purchace order 
+	- disable user ability to delete a sequence
+	- make user only can update sequence price
+Trujena
+	- fix copy sections, templates, components func when store is created
+	- review ahmed's code
+	- add compponent_id popup_id to store image model
+	- handle logic of both fields
+	
+	
+	
+	
+	26 - 11 - 2024
+- add fields to image store model (component, popup_store , popup)
+- enforce user to choose exactly one of component, popup_store or popup and cannot select more than one
+- handle the logic of deleting unused images of (component, popup_store , popup) by three signals
+- remove a unique_togerther constraint in image_store model
+- remove listing store images endpoint 
+- remove name field from store image model
+- remove store image limit
+- update StoreImageSerializer logic of creating an image
+- update test case of store image create
+
+
+
+	1 - 12 - 2024
+- update delete_unused_images utility
+- created StoreBackup Model
+- add action for taking backup for any store
+- work on restoring store backup
+- work on restoreing template data from backuped data 
+
+
+
+
+	2 - 12 - 2024
+- add action for taking backup for any store
+- add restore backed up template action && separate logic in a utility
+- update backup , restore default store settings
+- separate all utils to three files 
+- change notification image to image field
+- work on handeling copying model fields
+
+
+	3 - 12 - 2024
+- fix notification publish
+- fix case of no image found in notification
+- update the logic of deleting the unused images to handle the nested json settings
+- work on handeling copying model fields
+- add a utility for copying model instance 
+- add a utility copying fields 
+- updated the endpoints (reset_store_settings, template::reset:restore_components, template::restore_backup: restore_components, copy_sections_templates_components)
+
+
+
+	1 - 1 - 2025
+- normalize all lead countries to lowercase
+- add label field to lead agency model
+- give admin users full access to reviewer and entry actions
+- make a reviewer can sort by (lead source, created by, creaded at)
+- return AgencyLead_label choices on master-data endpoint
+- add total_leads card to the dashboard to view all the leads
+
+
+
+	2 - 1 - 2025
+- work on user soft delete
+- make total_leads filtered by from, to date only 
+- and move old behavior of total_leads to agency_lead
+
+
+	6 - 1 - 2025
+- fix user soft delete removed relations
+
+
+
+	7 - 1 - 2025
+- change deals_conversion calculation
+- dashboard disappear meeting conversion for sales filter
+- disappear deals, deals conversion and revenue for tele filter
+- work on restoring backup data 
+
+	8 - 1 - 2025
+- make country field a choices and add country code to it
+- view country, country code in master data 
+- update agency_lead_labels in master data
+- remove lead country normalization
+- make country in lead-assignments/schedule not required
+- make country check on choices only in lead-assignments/schedule
+
+
+
+	9 - 1 - 2025
+azzrk loop
+	- ALTER lead COUNTRIES TextChoices 
+toolify
+	- refactor reset password action to be a viewset action
+	- move reset password logic to a serializer
+	- work on refactoring reset password confirm
+	
+	
+	12 - 1 - 2025
+- work on refactoring reset password confirm 
+- consider sales in agencies-leads/many/
+- filter by role in user admin panel
+- add custom filter for lead entry
+	
+	
+	13 - 1 - 2025
+- finish refactoring reset password confirm (tooliify) 	
+- alter LeadAgency.label to be nullable (azzrk loop)
+	
+	 
+

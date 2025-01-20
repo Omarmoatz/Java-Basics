@@ -1,0 +1,11 @@
+
+error set database enviroment variable
+	export DATABASE_URL=postgres://user:password@localhost:5432/dbname
+
+
+
+store: is_default(8), store_api_key, name(2)
+
+
+
+chown -R $USER .
