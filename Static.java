@@ -11,8 +11,12 @@ class Mobile{
 
         // local variable
         int a;
-        
+
         System.out.println(id + " : " + brand + " : " + name);
+    }
+
+    public static void show_data(Mobile obj){
+        System.out.println(obj.id + " : " + brand + " : " + obj.name);
     }
 
 }
@@ -38,6 +42,8 @@ public class Static {
         m1.show();
         m2.show();
 
+
+        Mobile.show_data(m1);
     }
     
 }
