@@ -7,6 +7,8 @@ class Human{
     Human(){    // Default Constructor  
         name = "omar";
         age = 23;
+
+        System.out.println("----object created----");
     }
 
     Human( String name){    // Parametrized Constructor
@@ -34,6 +36,10 @@ class Human{
     void setName(String name){
         this.name = name;
     }
+
+    void showData(){
+        System.out.println(this.getName() + " : " + this.getAge());
+    }
 }
 
 
@@ -47,13 +53,17 @@ class Encapsulation {
         Human obj1 = new Human("mohamed");
         Human obj2 = new Human(80, "Ali");
 
-        System.out.println(obj1.getName() + " : " + obj1.getAge());
-        System.out.println(obj2.getName() + " : " + obj2.getAge());
+        obj2.showData();
+        obj1.showData();
 
 
         obj.setName("ahmad");
         obj.setAge(30);
+        obj.showData();
 
-        System.out.println(obj.getName() + " : " + obj.getAge());
+
+        new Human().showData();  // anonymous object
+        new Human().showData();  // anonymous object
+
     }
 }
