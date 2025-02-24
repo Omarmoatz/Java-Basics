@@ -6,7 +6,19 @@ class Mobile{
     static String brand;
     String name;
 
-    // instance method
+    static{
+        brand = "Samsung";
+        System.out.println("in static");
+    }
+    
+    // constructor
+    Mobile(){
+        id = 145;
+        name = "Samsung S25";
+        System.out.println("in constructor");
+    } 
+
+    // instance method encapsulation
     public void show(){
 
         // local variable
@@ -28,7 +40,6 @@ public class Static {
 
         Mobile m1 = new Mobile();
         m1.id = 1;
-        Mobile.brand = "Samsung";
         m1.name = "Galaxy S24";
 
 
@@ -37,7 +48,6 @@ public class Static {
         // m2.brand = "Samsung mini";
         m2.name = "Galaxy S25";
 
-        Mobile.brand = "Samsung mini";
 
         m1.show();
         m2.show();
