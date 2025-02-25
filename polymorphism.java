@@ -18,6 +18,22 @@ class Polymorphism {
 
         obj = new C();
         obj.display();
+
+
+        // Up Casting
+        A object = new B();
+        object.show();
+
+        // B objectB = new A(); // Error
+        // objectB.display();
+
+        // Down Casting
+        B objectB = (B) object;
+        objectB.show2();
+        
+        
+        
+
     }
 }
 
@@ -29,12 +45,20 @@ class A{
     void display(){
         System.out.println("in Class A");
     }
+    
+    void show(){
+        System.out.println("in show A");
+    }
 }
 
 class B extends A{
 
     void display(){
         System.out.println("in Class B");
+    }
+    
+    void show2(){
+        System.out.println("in show B");
     }
 }
 
