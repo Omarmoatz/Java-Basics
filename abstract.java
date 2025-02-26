@@ -16,7 +16,8 @@ class Abstract {
         OuterClass.StaticInnerClass obj4 = new OuterClass.StaticInnerClass();
         obj4.show();
 
-
+        
+        // creating anonymous inner class 
         C objC = new C(){
             public void stop() {             
                 super.stop();
@@ -24,6 +25,23 @@ class Abstract {
             }     
         };
         objC.stop();
+
+
+        // creating anonymous inner class from abstract class 
+        Car carObj = new Car(){
+            public void drive(){
+                System.out.println("   driving .....");
+            }
+
+            public void stop(){
+                System.out.println("   stopping......");
+            }
+        };
+
+        carObj.drive();
+        carObj.stop();
+
+
     }    
 }
 
